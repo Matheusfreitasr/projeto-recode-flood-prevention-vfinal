@@ -1,0 +1,142 @@
+.principalCadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0 3rem 0;  
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cadastrarFormulario {
+    padding: 2rem 3rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.cadastrarFormulario:invalid {
+    border-color: #FF0000;
+}
+
+.cadastrarFormulario:valid {
+    border-color: #00FF00;
+}
+
+.cadastrarFormularioTitulo {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.cadastrarFormulario label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cadastrarFormularioInput {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 15px;
+    margin: .3rem 0 1.5rem 0;
+}
+
+select {
+    background-color: #FFFFFF;
+}
+
+input[type="checkbox"] {
+    display: inline !important;
+    width: initial;
+    margin: 0 0 0 .5rem !important;
+    appearance: none;
+    padding: .3rem !important;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:valid {
+    background-color: #00FF00;
+}
+
+.cadastrarFormularioInput:is(:focus, :active) {
+    outline: none;
+}
+
+.cadastrarFormularioInput:invalid {
+    box-shadow: 0px 0px 1px 2px rgba(255,0,0,.50);
+    border: 1px solid #FF0000;
+}
+
+.cadastrarFormularioInput:valid {
+    box-shadow: 0px 0px 1px 2px rgba(0,255,0,.50);
+    border: 1px solid #00FF00;
+}
+
+.cadastrarFormularioInput:is([readonly]) {
+    box-shadow: 0px 0px 1px 2px rgba(0,255,0,.50);
+    border: 1px solid #00FF00;
+}
+
+#cadastrarFormularioBotaoEnviar {
+    display: block;
+    margin: 1rem 1rem 1rem auto;
+    border: 1px solid rgb(0, 108, 141);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .6rem 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    color: rgb(0, 108, 141);
+    transition: .3s all ease-in-out;
+}
+
+#cadastrarFormularioBotaoEnviar:is(:hover, :active, :focus) {
+    color: #FFFFFF;
+    background-color: rgb(0, 108, 141);
+}
+
+.cadastrarFormularioExplicacao {
+    align-self: flex-start;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.cadastrarFormularioExplicacaoLista, .cadastrarFormularioExplicacaoListaItem {
+    list-style: inside disc;
+}
+
+.cadastrarFormularioExplicacaoListaItem {
+    text-indent: 1rem;
+    margin-bottom: .2rem;
+}
+
+.cadastrarFormularioExplicacaoListaItem:first-child {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 0) and (max-width: 990px) {
+    .principalCadastrar {
+        margin-top: 8rem !important;
+    }
+
+    .cadastrarFormulario, .cadastrarFormularioExplicacao{
+        flex: 90%;
+        flex-grow: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .cadastrarFormulario {
+        flex: .6;
+        flex-grow: .6;
+        margin: 0 0 0 1.5rem;
+    }
+
+    .cadastrarFormularioExplicacao {
+        flex: .4;
+        flex-grow: .4;
+        margin: 0 1.5rem 0 0;
+    }
+}

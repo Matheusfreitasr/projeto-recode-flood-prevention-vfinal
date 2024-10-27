@@ -1,0 +1,82 @@
+.principalLogin {
+    background-image: url("../imagens/wallpaper-login-page.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caixaLogin {
+    padding: 5rem 0;
+    background-color: #ffffff60;
+    backdrop-filter: blur(10px);
+}
+
+.caixaLoginTitulo {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.loginForm {
+    max-width: 40%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #ffffffad;
+    box-shadow: 0px 0px 2px 1px rgba(0, 120, 141, 0.39);
+}
+
+.loginForm label {
+    font-weight: 600;
+}
+
+.loginFormInput {
+    display: block;
+    width: 100%;
+    padding: .7rem;
+    margin-bottom: 1.5rem;
+    background-color: inherit;
+    margin-top: .3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 120, 141);
+    outline: none;
+}
+
+.recuperarSenha {
+    text-decoration: none;
+    color: rgb(0, 120, 141);
+}
+
+#loginFormBtn {
+    display: block;
+    margin: 2rem 0 1rem auto;
+    cursor: pointer;
+    border: 1px solid rgb(0, 120, 141);
+    padding: .8rem 2rem;
+    color: rgb(0, 120, 141);
+    background-color: transparent;
+    border-radius: 5px;
+    transition: .3s all ease-in-out;
+    font-weight: 600;
+}
+
+#loginFormBtn:is(:hover, :active, :focus) {
+    color: #FFFFFF;
+    background-color: rgb(0, 120, 141);
+}
+
+@media screen and (min-width: 0) and (max-width: 990px) {
+    .principalLogin {
+        margin-top: 4rem;
+    }
+
+    .loginForm {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .loginForm {
+        max-width: 40%;
+    }
+}

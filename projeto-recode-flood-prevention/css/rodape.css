@@ -1,0 +1,98 @@
+.rodape {
+    padding: 4rem 4rem .5rem 4rem;
+    background-color: #171919;
+    color: #FFFFFF;
+}
+
+.rodape h3 {
+    margin-bottom: 1rem;
+}
+
+.caixaRodapeConteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.rodapeConteudoSobre {
+    flex: 2;
+    align-self: flex-start;
+}
+
+.rodapeConteudoUteis, .rodapeConteudoSocial {
+    flex: 1;
+    align-self: flex-start;
+}
+
+.rodapeConteudoUteis li {
+    margin-bottom: .5rem;
+}
+
+.rodapeConteudoUteis li:last-child {
+    margin-bottom: 0;
+}
+
+.rodapeConteudoUteis a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.rodapeConteudoUteis a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.rodapeConteudoSocial h3 {
+    text-align: center;
+}
+
+.rodapeConteudoSocialLista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodapeConteudoSocialListaItem {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: .5rem;
+    filter: sepia(1);
+    transition: .3s filter ease-in-out;
+}
+
+.rodapeConteudoSocialListaItem:is(:hover, :focus, :active) {
+    filter: none;
+}
+
+.rodapeConteudoSocialListaItem:last-child {
+    margin-right: 0;
+}
+
+.rodapeConteudoSocialLinks {
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iconeFacebook {
+    background-image: url("../imagens/facebook-icon.png");
+}
+
+.iconeInstagram {
+    background-image: url("../imagens/instagram-icon.png");
+}
+
+.iconeX {
+    background-image: url("../imagens/x-icon.png");
+}
+
+.rodapeCopyright {
+    text-align: center;
+}

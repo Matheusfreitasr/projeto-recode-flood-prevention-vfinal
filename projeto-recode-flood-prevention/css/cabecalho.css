@@ -1,0 +1,146 @@
+.cabecalho {
+    background-color: rgb(0, 108, 141);
+    padding: .5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cabecalhoCaixaLogo {
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: block;
+    opacity: .8;
+}
+
+.cabecalhoCaixaLogo:is(:hover, :focus, :active) {
+    opacity: 1;
+}
+
+.cabecalhoCaixaLogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.menuNavegacao {
+    width: max-content;
+    transition: .3s all ease-in-out;
+}
+
+.menuNavegacaoLista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+}
+
+.menuNavegacaoListaItem {
+    margin-left: 1.5rem;
+    transition: .3s transform ease-in-out;
+}
+
+.menuNavegacaoListaItem:first-child {
+    margin-left: 0;
+}
+
+.menuNavegacaoListaItem:hover {
+    transform: scale(1.1);
+}
+
+.menuNavegacaoListaItemLink {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: .8;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.50);
+}
+
+.menuNavegacaoListaItemLink:is(:hover, :focus, :active) {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* btn mobile menu nav*/
+
+.cabecalho label {
+    display: none;
+}
+
+#botaoMenuNavegacao {
+    width: 40px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.botaoMenuNavegacaoHamb {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #dbdbdb;
+    z-index: 5;
+}
+
+.botaoMenuNavegacaoHamb:first-child {
+    top: 3px;
+}
+
+.botaoMenuNavegacaoHamb:nth-child(2) {
+    top: 15px;
+}
+
+.botaoMenuNavegacaoHamb:last-child {
+    top: 27px;
+}
+
+#menucheck {
+    display: none;
+    background-color: transparent !important;
+}
+
+#menucheck:checked ~ .menuNavegacao {
+    left: 0 !important;
+}
+
+
+@media screen and (min-width: 0) and (max-width: 990px) {
+    .cabecalho {
+        padding: .7rem;
+        position: fixed;
+        width: 100%;
+        z-index: 9999999;
+        top: 0;
+    }
+
+    .menuNavegacao {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 9999999;
+        width: 80%;
+        background-color: rgb(0, 108, 141);
+        height: 100vh;
+    }
+
+    .menuNavegacaoLista {
+        display: block;
+    }
+
+    .menuNavegacaoListaItem {
+        margin: 2rem 0 0 2rem !important;
+    }
+
+    .menuNavegacaoListaItemLink {
+        font-size: 1.2rem !important;
+    }
+
+    .cabecalho label {
+        display: block !important;
+    }
+}

@@ -1,0 +1,63 @@
+.caixaArtigosGrid {
+    padding: 3rem 5rem;
+    background-color: #e6e6e6;
+}
+
+.artigosGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.caixaArtigosGridTitulo {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.artigosCard {
+    flex: 1;
+    flex-basis: 250px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: aqua;
+    position: relative;
+    max-width: 600px;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,.40);
+    transition: .3s all ease-in-out;
+    transform: scale(.9);
+}
+
+.artigosCard:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.40);
+}
+
+.artigosCardImagemCapa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: block;
+    z-index: 1;
+}
+
+.artigosCardTitulo {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ffffff46;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    color: #000000;
+}
+
+@media screen and (min-width: 0) and (max-width: 990px) {
+    .principalArtigos {
+        margin-top: 4rem;
+    }
+}

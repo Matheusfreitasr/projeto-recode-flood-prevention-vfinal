@@ -1,0 +1,335 @@
+.principalIndexCaixa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    padding: 3rem 0;
+    background-color: rgb(202, 243, 255);
+    color: #000000;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+
+.principalIndexQuemSomos {
+    position: relative;
+}
+
+.principalIndexQuemSomos h2 {
+    text-indent: 2rem;
+    font-size: 1.4rem;
+    animation: textoanimado 2s 1 linear;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.principalIndexQuemSomos p {
+    padding: 2rem;
+    animation: textoanimado 2s 1 linear;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.principalIndexCarrossel {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+
+.principalIndexCarrossel h2 {
+    position: absolute;
+    z-index: 3;
+    text-align: left;
+    text-indent: 2rem;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    top: 0;
+}
+
+.principalIndexCarrosselItem {
+    position: absolute;
+    z-index:1;
+    width: calc(100% - 6rem);
+    height: 80%;
+    top: 20%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.principalIndexCarrosselItem a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.principalIndexCarrosselItemDescricao {
+    color: #FFFFFF;
+    text-decoration: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background-color: #00000071;
+    padding: 1rem;
+    bottom: 0;
+}
+
+.carrosselItem1 {
+    background-color: red;
+    left: -100%;
+    animation-name: numero1;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    background-image: url("../imagens/carrossel-imagem-noticias.png");
+}
+
+.carrosselItem2 {
+    animation-name: numero2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    left: -100%;
+    background-color: green;
+    background-image: url("../imagens/carrossel-imagem-cadastro.png");
+}
+
+.carrosselItem3 {
+    animation-name: numero3;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    left: -100%;
+    background-color: black;
+    background-image: url("../imagens/carrossel-imagem-social.png");
+}
+
+.principalIndexNossaMissao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: #000000;
+    background-color: rgb(202, 243, 255);
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.principalIndexNossaMissaoTexto {
+    flex: 1;
+    flex-basis: calc(40% + 5.3rem);
+    padding: 3rem 0 3rem 2rem;
+    height: inherit;
+    overflow: auto;
+}
+
+.principalIndexNossaMissaoTexto::-webkit-scrollbar {
+    width: 0;
+}
+
+.principalIndexNossaMissao h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.principalIndexNossaMissao h3 {
+    font-size: 1.1rem;
+}
+
+.principalIndexNossaMissao p {
+    text-indent: 3rem;
+    text-align: justify;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.principalIndexNossaMissaoChamada {
+    flex: 1;
+    flex-basis: calc(40% + 5.3rem);
+    background-image: url("../imagens/index-grupo-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    left: 0;
+    animation: missaochamada 2s 1 linear;
+}
+
+.principalIndexNossaMissaoChamada::after {
+    width: 100%;
+    height: 100%;
+    background-color: #00000063;
+    position: absolute;
+    content: "";
+    z-index: 1;
+}
+
+.principalIndexNossaMissaoChamadaConteudo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+}
+
+.principalIndexNossaMissaoChamadaConteudo h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.70);
+    font-size: 1.4rem;
+}
+
+.principalIndexNossaMissaoChamadaConteudo a {
+    display: block;
+    margin: auto;
+    width: max-content;
+    border-radius: 5px;
+}
+
+.principalIndexNossaMissaoChamadaConteudo button {
+    padding: .7rem 1.3rem;
+    border: 1px solid rgb(0, 108, 141);
+    background-color: rgb(0, 108, 141);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.1rem;
+    backdrop-filter: blur(5px);
+    border-radius: inherit;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+
+
+/*animações - início */
+
+@keyframes textoanimado {
+    from {
+        opacity: 0;
+        left: -100%;
+        top: -100%;
+    } to {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes missaochamada {
+    from {
+        left: 100%;
+        opacity: 0;
+        z-index: 1;
+    } to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes numero1 {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 3rem;
+        z-index: 2;
+    }
+
+    100% {
+        left: 100%;
+        z-index: 1;
+    }
+}
+
+@keyframes numero2 {
+    0% {
+        left: 100%;
+        z-index: 1;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    100% {
+        left: 3rem;
+        z-index: 2;
+    }
+}
+
+@keyframes numero3 {
+    0% {
+        left: 3rem;
+        z-index: 2;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+/*animações - fim */
+
+
+@media screen and (min-width: 0) and (max-width: 990px) {
+    .principalIndex {
+        margin-top: 8rem;
+    }
+
+    .principalIndexQuemSomos {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    .principalIndexCarrossel {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }   
+    
+    .principalIndexNossaMissao {
+        height: auto;
+    }
+
+    .principalIndexNossaMissaoChamada {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .principalIndexQuemSomos {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .principalIndexCarrossel {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .principalIndexNossaMissao {
+        height: 100vh;
+    }
+    
+    .principalIndexNossaMissaoChamada {
+        height: inherit;
+    }
+}
